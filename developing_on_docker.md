@@ -5,7 +5,9 @@
 
 ![](https://pbs.twimg.com/profile_banners/1138959692/1469204360/1500x500)
 
-### Expectations
+---
+
+## Expectations
 
 - Not a tutorial, designed to whet your appetite
 - Better understanding:
