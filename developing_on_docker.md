@@ -16,40 +16,50 @@
 ## What is Docker?
 
 - Docker is the world's leading software containerization platform.
-  - a set of tools.  
+  - a set of tools that manage Containers.  
   - an ecosystem around Containerization.  
   - also a shift in philosophy.
 
 ---
 
-## What is Docker?
+## What is Containerization?
 
-- Essentially virtualization: hosting an Operating System on another Operating System.
+- Essentially virtualization, hosting an Operating System on another Operating System, with a different architectural approach.
   - You can create **many lightweight Linux** virtual servers on your MBP.
 - As developers, we will use them to **serve things we depend on**: postgres, redis, SOLR, ELK stack, logstash, etc.  
 - **That's just the start**.  As we'll see, they open up a whole new world of possibilities.
 
 ---
 
-## What is Containerization?
+## What are Containers?
 
 Docker containers are lightweight, based on open standards, and secure by default.
 
-Containers running on a single machine share the same operating system kernel;
-- they start instantly and use less RAM.
-- They have isolated filesystems and can share common files, making disk usage and image downloads much more efficient.
+Linux containers are self-contained execution environments -- with their own,
+- isolated CPU
+- memory
+- block I/O
+- network resources
+
+-- sharing the kernel of the host operating system.
 
 ---
 
-## _Clarification:_ these are not, technically, virtual machines.  
+### It feels like a virtual machine, but sheds all the weight and startup overhead of a guest operating system.
 
-Containers and virtual machines have similar resource isolation and allocation benefits -- but a different architectural approach allows containers to be more portable and efficient.  
-
-> In the end, for us, they both provide a server to run our stuff in isolation.
+- they startup almost instantly
+- consume very few resources
+- can create hundreds on a laptop
 
 ---
 
-## Hello World, Docker style
+> In a nutshell,
+
+>they both provide lightweight servers to run our stuff in isolation.
+
+---
+
+## Hello World, Docker style ヾ(⌐■_■)ノ♪
 
 ``` shell
 $ docker run hello-world
@@ -61,11 +71,13 @@ Status: Downloaded newer image for hello-world:latest
 
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
+...
 ```
 
 ---
 
 ``` shell
+...
 To generate this message, Docker took the following steps:
  1. The Docker client contacted the Docker daemon.
  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
@@ -93,7 +105,7 @@ For more examples and ideas, visit:
 
 ---
 
-$ docker run docker/whalesay cowsay "B'more on Rails"
+`$ docker run docker/whalesay cowsay "B'more on Rails"`
 
  ```
  _________________
@@ -116,7 +128,7 @@ $ docker run docker/whalesay cowsay "B'more on Rails"
 
 ## Why do we care?
 
-### Docker allows you to package your application into a standardized unit for software development.
+### Docker allows you to package your application into a standardized unit for software development. They liken it to [how shipping containers revolutionized shipping](https://www.linux.com/news/docker-shipping-container-linux-code).
 
 Let me just show you: [Passport Scheduler](https://github.com/mattscilipoti/passport_scheduler#passport-scheduler)
 
@@ -188,16 +200,14 @@ But... it is NOT in my local postgresql.  It's in a container.
 
 # **None** of that is installed "locally".
 
----
-
-# Each lives in isolation.
-# No cross dependency headaches.
+- Each lives in isolation.
+- No cross dependency headaches.
 
 ---
 
 ## No longer need to install...
 - RVM
-- `brew install postgresql`
+- `brew install postgresql` or "postgresapp"
 - gcc/xcode dev tools
 - apache/nginx
 - elasticsearch
@@ -229,13 +239,13 @@ How do we manage:
 
 ---
 
-## When do I use Docker?
+## When do _I_ use Docker?
 
 - I'm still playing.
 - Only in Development.  
   - Makes it dead simple for other developers.
   - Or mothballed apps
-- We aren't ready to use this in Production... yet.
+- My team (and SysAdmins) aren't ready to use this in Production... yet.
 - Using it for Test environment is... slow.
   - Thinking about using it only for services.  Run `rails server`, `rspec`, etc. locally.
 
