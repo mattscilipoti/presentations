@@ -298,6 +298,20 @@ How do we manage:
 
 ---
 
+# Next steps
+
+- [Running a Rails Development Environment in Docker](https://blog.codeship.com/running-rails-development-environment-docker/).
+- [Dockerfile best practices](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
+
+### Tips
+
+- Don't get hung up on which OS will the base for each Container (Ubuntu, Ubuntu LTS, debian:wheezy, ruby:2.3.1, ruby-slim, alpine)
+- If you have good seed data (for dev, demos, maybe testing) you can drop and recreate the postgresql container quickly and easily.
+- Remove an image via `$ docker rmi <image-id_or_name>`
+- Someday maybe: https://phusion.github.io/baseimage-docker/
+
+---
+
 ## Follow up
 
 - This presentation: [https://github.com/mattscilipoti/presentations](https://github.com/mattscilipoti/presentations/blob/master/developing_on_docker.md)
