@@ -101,7 +101,19 @@ For more examples and ideas, visit:
 
 ## cowsay?
 
-`docker run docker/whalesay cowsay "B'more on Rails"`
+```
+$ cowsay quack
+```
+```
+ _______
+< quack >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+```
 
 ---
 
