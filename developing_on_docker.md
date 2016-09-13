@@ -3,13 +3,15 @@
 # [Developing On Docker](https://remarkjs.com/remarkise?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmattscilipoti%2Fpresentations%2Fmaster%2Fdeveloping_on_docker.md)
 -- matt@scilipoti.name
 
-## Expectations
-- Whet your appetite, not a tutorial
+![](https://pbs.twimg.com/profile_banners/1138959692/1469204360/1500x500)
+
+### Expectations
+
+- Not a tutorial, designed to whet your appetite
 - Better understanding:
   - Docker
   - some of the vocabulary
   - why we might be interested
-
 
 ---
 
@@ -290,6 +292,7 @@ How do we manage:
 - [nut](https://github.com/matthieudelaro/nut): the development environment, containerized.
   > Provided that you use Docker, you don't need to install anything on your computer. Not even Go!
 - [awesome-sysadmin](https://github.com/kahun/awesome-sysadmin)
+- Docker provides great tutorials.
 
 ---
 
