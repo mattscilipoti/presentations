@@ -105,10 +105,11 @@ For more examples and ideas, visit:
 
 ## cowsay?
 
-```
+``` shell
 $ cowsay quack
 ```
-```
+
+``` shell
  _______
 < quack >
  -------
@@ -123,7 +124,7 @@ $ cowsay quack
 
 `$ docker run docker/whalesay cowsay "B'more on Rails"`
 
- ```
+ ``` shell
  _________________
 < B'more on Rails >
  -----------------
@@ -156,12 +157,17 @@ Let me just show you: [Passport Scheduler](https://github.com/mattscilipoti/pass
 - No VMWare
 - No resource hogs
 
+## NOTE!
+
+Use the install instructions on the Docker website.  NOT homebrew.
+
 ---
 
 ## [Passport Scheduler](https://github.com/mattscilipoti/passport_scheduler#passport-scheduler)
 
 1. build and run the container
-  ```
+
+  ``` shell
   $ docker-compose build
   $ docker-compose run app rake db:setup
   $ docker-compose up
@@ -305,6 +311,7 @@ How do we manage:
 
 ### Tips
 
+- Use the install instructions on the Docker website.  NOT homebrew, for now.
 - Don't get hung up on which OS will the base for each Container (Ubuntu, Ubuntu LTS, debian:wheezy, ruby:2.3.1, ruby-slim, alpine)
 - If you have good seed data (for dev, demos, maybe testing) you can drop and recreate the postgresql container quickly and easily.
 - Remove an image via `$ docker rmi <image-id_or_name>`
